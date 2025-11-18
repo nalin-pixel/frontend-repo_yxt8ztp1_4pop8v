@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import ListingCard from './ListingCard'
 
 const API_BASE = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
@@ -36,7 +37,7 @@ function ListingGrid() {
             <h2 className="text-2xl font-bold text-slate-900">Featured resale listings</h2>
             <p className="text-slate-600 text-sm">Fresh secondary market properties in Dubai</p>
           </div>
-          <a href="#/search" className="text-slate-900 font-medium">View all</a>
+          <Link to="/search" className="text-slate-900 font-medium">View all</Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.items.map((item) => (
